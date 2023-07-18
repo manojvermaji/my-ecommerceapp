@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          has_many :order
-         has_many :ordered_product, through::order, source::product
-         #has_many :fav_books, through: :likes, source: :book
+         #has_many :ordered_product, through::order, source::product
 
-         has_many :carts
+         #has_many :carts
 end

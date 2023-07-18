@@ -5,3 +5,12 @@
   <%= button_to "Sign in", new_user_session_path %> 
 <% end %>
 <h1>Hello this is ecommerce website</h1>
+
+<%= form_with Product: @product do |form| %>
+  <%= form.label :query, "Search Item:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<%# link_to 'Cart', uindex_path %>
+<% link_to 'Order', index_path  %>
